@@ -1,0 +1,44 @@
+{
+  "nodes": {
+    "benilla": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1793881489,
+        "narHash": "sha256-/mb9KIL+J/1l9Z9QQL+KpnL2bgQ2JQ6bgxtb7P0D1Fg=",
+        "owner": "samwhosung",
+        "repo": "benilla",
+        "rev": "63167449d89a65dfc4f62400cacb1bbf54d9f1ff",
+        "type": "github"
+      },
+      "original": {
+        "owner": "samwhosung",
+        "repo": "benilla",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1793726008,
+        "narHash": "sha256-jQp1wKvbwWdLBASTXkSi/VYmDJ5AbBi1WvcMt9HWJC8=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "1d060086d60cb76a40cf37109f979d88a5bd6396",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "benilla": "benilla",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
