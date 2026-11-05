@@ -27,7 +27,20 @@
         buildNoDefaultFeatures = true;
         doCheck = false;
 
-        nativeBuildInputs = with pkgs; [ pkg-config makeWrapper ];
+        nativeBuildInputs = with pkgs; [ pkg-config makeWrapper copyDesktopItems ];
+
+        # make benilla show up in desktop app launchers (gnome's grid etc.)
+        desktopItems = [
+          (pkgs.makeDesktopItem {
+            name = "benilla";
+            desktopName = "benilla";
+            comment = "benilla client";
+            exec = "benilla";
+            icon = "applications-games"; # generic placeholder here
+            categories = [ "Game" ];
+            startupWMClass = "benilla";
+          })
+        ];
         buildInputs = with pkgs; [ alsa-lib udev ];
 
         # bevy dlopens these at runtime. otherwise they would go beside the binary in nix store, which is read only.
